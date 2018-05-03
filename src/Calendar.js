@@ -788,6 +788,8 @@ class Calendar extends React.Component {
     let CalToolbar = components.toolbar || Toolbar
     const label = View.title(current, { formats, culture, length })
 
+    const { handleNavigate } = this
+
     return (
       <div
         {...elementProps}
@@ -796,11 +798,11 @@ class Calendar extends React.Component {
       >
         <Keymaster
           keyName="left"
-          onKeyDown={this.handleNavigate.bind(null, navigate.PREVIOUS)}
+          onKeyDown={() => handleNavigate(navigate.PREVIOUS)}
         />
         <Keymaster
           keyName="right"
-          onKeyDown={this.handleNavigate.bind(null, navigate.NEXT)}
+          onKeyDown={() => handleNavigate(navigate.NEXT)}
         />
         {toolbar && (
           <CalToolbar
