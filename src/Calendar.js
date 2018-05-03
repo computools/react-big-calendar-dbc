@@ -688,6 +688,8 @@ class Calendar extends React.Component {
       event: PropTypes.node,
       showMore: PropTypes.func,
     }),
+
+    useKeymaster: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -713,6 +715,8 @@ class Calendar extends React.Component {
 
     longPressThreshold: 250,
     getNow: () => new Date(),
+
+    useKeymaster: false,
   }
 
   getViews = () => {
@@ -764,6 +768,7 @@ class Calendar extends React.Component {
       date: current,
       getNow,
       length,
+      useKeymaster,
       ...props
     } = this.props
 
@@ -796,14 +801,16 @@ class Calendar extends React.Component {
         className={cn(className, 'rbc-calendar', props.rtl && 'rbc-is-rtl')}
         style={style}
       >
-        <Keymaster
-          keyName="left"
-          onKeyDown={() => handleNavigate(navigate.PREVIOUS)}
-        />
-        <Keymaster
-          keyName="right"
-          onKeyDown={() => handleNavigate(navigate.NEXT)}
-        />
+        {useKeymaster && [
+          <Keymaster
+            keyName="left"
+            onKeyDown={() => handleNavigate(navigate.PREVIOUS)}
+          />,
+          <Keymaster
+            keyName="right"
+            onKeyDown={() => handleNavigate(navigate.NEXT)}
+          />,
+        ]}
         {toolbar && (
           <CalToolbar
             date={current}
