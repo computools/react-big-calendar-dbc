@@ -1,9 +1,10 @@
 {
-  "name": "react-big-calendar",
-  "version": "0.19.0",
+  "name": "@dbatarin/react-big-calendar",
+  "version": "0.1.0",
   "description": "Calendar! with events",
   "author": "Jason Quense <monastic.panic@gmail.com>",
-  "repository": "intljusticemission/react-big-calendar",
+  "contributors": ["Dmitry Batarin <dmitry.bat@computools.com>"],
+  "repository": "dbatarin-computools/react-big-calendar",
   "license": "MIT",
   "main": "lib/index.js",
   "style": "lib/css/react-big-calendar.css",
