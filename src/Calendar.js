@@ -10,6 +10,7 @@ import {
   views as componentViews,
 } from './utils/propTypes'
 import warning from 'warning'
+import Keymaster from 'react-keymaster'
 
 import { notify } from './utils/helpers'
 import { navigate, views } from './utils/constants'
@@ -793,6 +794,14 @@ class Calendar extends React.Component {
         className={cn(className, 'rbc-calendar', props.rtl && 'rbc-is-rtl')}
         style={style}
       >
+        <Keymaster
+          keyName="left"
+          onKeyDown={() => this.handleNavigate(navigate.PREVIOUS)}
+        />
+        <Keymaster
+          keyName="right"
+          onKeyDown={() => this.handleNavigate(navigate.NEXT)}
+        />
         {toolbar && (
           <CalToolbar
             date={current}

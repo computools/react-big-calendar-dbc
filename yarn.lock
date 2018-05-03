@@ -5082,6 +5082,10 @@ keycode@^2.1.0, keycode@^2.1.9:
   version "2.1.9"
   resolved "https://registry.yarnpkg.com/keycode/-/keycode-2.1.9.tgz#964a23c54e4889405b4861a5c9f0480d45141dfa"
 
+"keymaster@github:rakannimer/keymaster":
+  version "1.6.2"
+  resolved "https://codeload.github.com/rakannimer/keymaster/tar.gz/99ed6b7629bd76af6628c9faf901fef3e9e43957"
+
 killable@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/killable/-/killable-1.0.0.tgz#da8b84bd47de5395878f95d64d02f2449fe05e6b"
@@ -7011,6 +7015,12 @@ react-inspector@^2.2.2:
   dependencies:
     babel-runtime "^6.26.0"
     is-dom "^1.0.9"
+
+react-keymaster@0.3.1:
+  version "0.3.1"
+  resolved "https://registry.yarnpkg.com/react-keymaster/-/react-keymaster-0.3.1.tgz#4249cc1fe841fef191552fa409f9dd947ab3fe31"
+  dependencies:
+    keymaster rakannimer/keymaster
 
 react-modal@^3.1.10:
   version "3.1.10"
