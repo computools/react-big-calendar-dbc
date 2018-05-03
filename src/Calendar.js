@@ -796,11 +796,11 @@ class Calendar extends React.Component {
       >
         <Keymaster
           keyName="left"
-          onKeyDown={() => this.handleNavigate(navigate.PREVIOUS)}
+          onKeyDown={this.handleNavigate.bind(null, navigate.PREVIOUS)}
         />
         <Keymaster
           keyName="right"
-          onKeyDown={() => this.handleNavigate(navigate.NEXT)}
+          onKeyDown={this.handleNavigate.bind(null, navigate.NEXT)}
         />
         {toolbar && (
           <CalToolbar
