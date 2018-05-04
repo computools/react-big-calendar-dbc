@@ -4,7 +4,7 @@
   "description": "Calendar! with events",
   "author": "Jason Quense <monastic.panic@gmail.com>",
   "contributors": ["Dmitry Batarin <dmitry.bat@computools.com>"],
-  "repository": "dbatarin-computools/react-big-calendar",
+  "repository": "computools/react-big-calendar-dbc",
   "license": "MIT",
   "main": "lib/index.js",
   "style": "lib/css/react-big-calendar.css",
