@@ -691,6 +691,8 @@ class Calendar extends React.Component {
 
     useKeymaster: PropTypes.bool,
     onClickAdd: PropTypes.func,
+    onShowMore: PropTypes.func,
+    disableDrillDown: PropTypes.bool,
   }
 
   static defaultProps = {
@@ -719,6 +721,8 @@ class Calendar extends React.Component {
 
     useKeymaster: false,
     onClickAdd: null,
+    onShowMore: null,
+    disableDrillDown: false,
   }
 
   getViews = () => {
@@ -772,6 +776,8 @@ class Calendar extends React.Component {
       length,
       useKeymaster,
       onClickAdd,
+      onShowMore,
+      disableDrillDown,
       ...props
     } = this.props
 
@@ -845,8 +851,9 @@ class Calendar extends React.Component {
           onSelectEvent={this.handleSelectEvent}
           onDoubleClickEvent={this.handleDoubleClickEvent}
           onSelectSlot={this.handleSelectSlot}
-          onShowMore={this._showMore}
+          onShowMore={onShowMore}
           onClickAdd={onClickAdd}
+          disableDrillDown={disableDrillDown}
         />
       </div>
     )
