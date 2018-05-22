@@ -79,6 +79,7 @@ let propTypes = {
 
   onClickAdd: PropTypes.func,
   disableDrillDown: PropTypes.bool,
+  selectedDate: PropTypes.object,
 }
 
 class MonthView extends React.Component {
@@ -169,6 +170,7 @@ class MonthView extends React.Component {
       date,
       longPressThreshold,
       onClickAdd,
+      selectedDate,
     } = this.props
 
     const { needLimitMeasure, rowLimit } = this.state
@@ -208,6 +210,7 @@ class MonthView extends React.Component {
         dateCellWrapperComponent={components.dateCellWrapper}
         longPressThreshold={longPressThreshold}
         onClickAdd={onClickAdd}
+        selectedDate={selectedDate}
       />
     )
   }

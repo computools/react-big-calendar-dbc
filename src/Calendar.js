@@ -693,6 +693,7 @@ class Calendar extends React.Component {
     onClickAdd: PropTypes.func,
     onShowMore: PropTypes.func,
     disableDrillDown: PropTypes.bool,
+    selectedDate: PropTypes.object,
   }
 
   static defaultProps = {
@@ -723,6 +724,7 @@ class Calendar extends React.Component {
     onClickAdd: null,
     onShowMore: null,
     disableDrillDown: false,
+    selectedDate: null,
   }
 
   getViews = () => {
@@ -778,6 +780,7 @@ class Calendar extends React.Component {
       onClickAdd,
       onShowMore,
       disableDrillDown,
+      selectedDate,
       ...props
     } = this.props
 
@@ -854,6 +857,7 @@ class Calendar extends React.Component {
           onShowMore={onShowMore}
           onClickAdd={onClickAdd}
           disableDrillDown={disableDrillDown}
+          selectedDate={selectedDate}
         />
       </div>
     )

@@ -45,6 +45,7 @@ const propTypes = {
   maxRows: PropTypes.number.isRequired,
 
   onClickAdd: PropTypes.func,
+  selectedDate: PropTypes.object,
 }
 
 const defaultProps = {
@@ -52,6 +53,7 @@ const defaultProps = {
   maxRows: Infinity,
 
   onClickAdd: null,
+  selectedDate: null,
 }
 
 class DateContentRow extends React.Component {
@@ -154,6 +156,7 @@ class DateContentRow extends React.Component {
       onSelectEnd,
       longPressThreshold,
       onClickAdd,
+      selectedDate,
       ...props
     } = this.props
 
@@ -272,6 +275,7 @@ class DateContentRow extends React.Component {
           onSelectSlot={this.handleSelectSlot}
           cellWrapperComponent={dateCellWrapperComponent}
           longPressThreshold={longPressThreshold}
+          selectedDate={selectedDate}
         />
 
         <div className="rbc-row-content">

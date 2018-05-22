@@ -113,6 +113,7 @@ storiesOf('module.Calendar.week', module)
           onClickAdd={event => alert(JSON.stringify(event))}
           onShowMore={event => alert(JSON.stringify(event))}
           disableDrillDown
+          selectedDate={new Date(2015, 3, 1)}
         />
       </div>
     )
